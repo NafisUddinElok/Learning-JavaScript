@@ -7,10 +7,26 @@ const prompt = promptSync();
 
 
 
-//JSON 
-const text = `{"name" : "nafis", "age": 21}`;
-const obj = JSON.parse(text); // JSON.parse(text -> object)
-console.log(obj.name);
+
+
+
+
+// //JSON stringifying
+// const obj = {name : "nafis", age : 21};
+// const text = JSON.stringify(obj);
+// console.log(text);
+// console.log(typeof text); // string
+// console.log(typeof obj); // object
+
+
+
+
+// //JSON parsing
+// const text = `{"name" : "nafis", "age": 21}`;
+// const obj = JSON.parse(text); // JSON.parse(text -> object)
+// console.log(obj.name);
+// console.log(typeof text); // string
+// console.log(typeof obj); // object
 
 
 // //ini.stringify(object)
