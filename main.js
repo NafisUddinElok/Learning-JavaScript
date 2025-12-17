@@ -7,11 +7,32 @@ const prompt = promptSync();
 
 
 
+//JSON 
+const text = `{"name" : "nafis", "age": 21}`;
+const obj = JSON.parse(text); // JSON.parse(text -> object)
+console.log(obj.name);
 
 
+// //ini.stringify(object)
+// import ini from "ini";
+// const text = 
+// `
+// username = nafs
+// theme = dark
+// timeout = 30
+// `;
+// const config = ini.parse(text);
+// //parse-> text to data
+// //stringify -> data to text
+// console.log(config);
+// const balcal = ini.stringify(config);
+// console.log(balcal); // for ES modules
 
 
-
+// const ini = require("ini");
+// const text = `username = nafis timeout = 30`;
+// const result = ini.parse(text);
+// console.log(result); /// only fo CommonJs
 
 
 
