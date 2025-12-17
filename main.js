@@ -7,8 +7,8 @@ const prompt = promptSync();
 
 
 
-
-
+console.log(typeof {name : "nafis"}); // -> JS object
+console.log(typeof {"name" : "nafis"}); // -> JSON object
 
 
 // //JSON stringifying
