@@ -9,6 +9,21 @@ import fs from "fs";
 
 
 
+
+// const res = await fetch("/api/user");
+// if (!res.ok) {
+//   throw new Error("Server error");
+// }
+// const data = await res.json();
+// const res = fetch("/api/user"); // fetch returns a promise
+// console.log(res);
+// const a = await fetch("/api/user");
+// const a = await data.json();
+// console.log(a);
+
+
+
+
 // const text = fs.readFileSync("data.json", "utf8");
 // const data = JSON.parse(text);
 // data.count++;

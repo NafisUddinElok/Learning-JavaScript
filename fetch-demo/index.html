@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> fetch demo </title>
+    </head>
+    <body>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <h1> user info </h1>
+        <button id = "btn"> load user </button>
+        <p id = "output"></p>
+
+        <script>
+            async function loadUser(){
+                const res = await fetch("http://localhost:3000/api/user");
+                const data = await res.json();
+
+                document.getElementById("output").innerText = 
+                `Name : ${data.name}, age : ${data.age}`;
+            }
+
+            document.getElementById("btn").onclick = loadUser;
+        </script>
+    </body>
+</html>
