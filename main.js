@@ -4,6 +4,27 @@ import promptSync from "prompt-sync";
 // import { dayName } from "./dayname.js";
 
 const prompt = promptSync();
+import fs from "fs";
+
+
+
+
+// const text = fs.readFileSync("data.json", "utf8");
+// const data = JSON.parse(text);
+// data.count++;
+// console.log("count in memory : ", data.count);
+// try{
+// fs.writeFileSync("data.json", JSON.stringify(data, null, 2));
+// // if(!fs.writeFileSync("data.json", JSON.stringify(data, null, 2))){
+// //     throw new Error("Crash 2");
+// // }
+// console.log("writing in the file was successful");
+// }
+// catch(error){
+//     console.log("writing in the file was not done ");
+//     console.log(error.message);
+// }
+
 
 
 // /**
@@ -11,7 +32,7 @@ const prompt = promptSync();
 //  * fs is a file system module ( built into node.js) 
 //  * it lets you js program read files, write files, delete files.
 //  * */
-// import fs from "fs"; // utf8 converts bytes -> text
+//  // utf8 converts bytes -> text
 // const text = fs.readFileSync("data.json", "utf8"); // readfilesync read bytes from disk
 // console.log(text); 
 // console.log(typeof text);
