@@ -6,9 +6,36 @@ import promptSync from "prompt-sync";
 const prompt = promptSync();
 
 
+// /**
+//  *  fs + parse step by step 
+//  * fs is a file system module ( built into node.js) 
+//  * it lets you js program read files, write files, delete files.
+//  * */
+// import fs from "fs"; // utf8 converts bytes -> text
+// const text = fs.readFileSync("data.json", "utf8"); // readfilesync read bytes from disk
+// console.log(text); 
+// console.log(typeof text);
+// const data = JSON.parse(text);
+// console.log(data.name);
+// data.age = data.age + 1;//only changes memory, not the file
+// console.log(data.age);
+// fs.writeFileSync("data")
+// console.log(data);//only changes memory, not the file
+// /** why stringify is needed. files accept only text */
+// const nextext = JSON.parse(data, null, 2);
+// fs.writeFileSync(
+//     "data.json", 
+//     JSON.stringify(data, null, 2) // stringify(value, replacer, space) null means don't filter anything keep all properties
+// );
 
-console.log(typeof {name : "nafis"}); // -> JS object
-console.log(typeof {"name" : "nafis"}); // -> JSON object
+
+
+
+
+
+
+// console.log(typeof {name : "nafis"}); // -> JS object
+// console.log(typeof {"name" : "nafis"}); // -> JSON object
 
 
 // //JSON stringifying
