@@ -7,6 +7,181 @@ const prompt = promptSync();
 import fs from "fs";
 
 
+// async function f() {
+//   console.log("1");
+//   await 0;
+//   console.log("2");
+// }
+// async function g() {
+//   console.log("3");
+//   await f();
+//   console.log("4");
+// }
+// async function h() {
+//   console.log("5");
+//   await g();
+//   console.log("6");
+// }
+// console.log("7");
+// h();
+// console.log("8");
+// // Output: 7 5 3 1 8 2 4 6
+
+
+
+// async function f() {
+//   console.log("A");
+//   await 0;
+//   console.log("B");
+// }
+// async function g() {
+//   console.log("C");
+//   await 0;
+//   console.log("D");
+// }
+// console.log("E");
+// f();
+// g();
+// console.log("F"); // important topic : microtask queue
+// // Output: E A C F B D
+
+
+
+
+// async function f() {
+//   console.log("1");
+//   await 0;
+//   console.log("2");
+// }
+// async function main() {
+//   console.log("3");
+//   f();
+//   console.log("4");
+//   await 0;
+//   console.log("5");
+// }
+// main();
+// // Output: 3 1 4 2 5
+
+
+
+
+// async function f() {
+//   console.log("A");
+//   await 0;
+//   console.log("B");
+// }
+// async function g() {
+//   console.log("C");
+//   await f();
+//   console.log("D");
+// }
+// console.log("E");
+// g();
+// console.log("F");
+// // Output: E C A F B D
+
+
+
+
+// async function f() {
+//   console.log("1");
+//   await 0;
+//   console.log("2");
+//   await 0;
+//   console.log("3");
+// }
+// console.log("4");
+// f();
+// console.log("5");
+// // Output: 4 1 5 2 3
+
+
+
+
+// async function f() {
+//   console.log("A");
+//   await 0;
+//   console.log("B");
+// }
+// console.log("C");
+// f();
+// console.log("D");
+// // Output: C A D B
+
+
+
+
+
+
+// async function f() {
+//   console.log("A");
+//   await Promise.resolve();
+//   console.log("B");
+// }
+
+// async function g() {
+//   console.log("C");
+//   await f();
+//   console.log("D");
+// }
+
+// console.log("E");
+// g();
+// console.log("F");
+// // Output: E C A F B D
+
+
+// async function f() {
+//   console.log("A");
+//   await 1;
+//   console.log("B");
+//   await 2;
+//   console.log("E");
+// }
+// console.log("C");
+// await f();
+// console.log("\n");
+// f(); 
+// console.log("D");
+
+
+
+
+
+
+// let a = await 1; 
+// let b = await 2; 
+// let c = await Promise.resolve(); 
+// console.log(a); // 1
+// console.log(b); // 2
+// console.log(c); // undefined
+// console.log(a + b + c); // 3    
+
+
+
+
+
+// async function test() {
+//   console.log("Start");
+
+//   await 0; 
+//   console.log("After 0");
+
+//   await Promise.resolve();
+//   console.log("After Resolve");
+
+//   await 1;
+//   console.log("After 1");
+// }
+// test();
+// console.log("Global");
+// // Output:
+// // Start
+// // Global
+// // After 0
+// // After Resolve
+// // After 1
 
 
 
