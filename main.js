@@ -7,6 +7,19 @@ const prompt = promptSync();
 import fs from "fs";
 
 
+// let x = 0;
+// let y = 0
+// async function f() {
+//   x = 1;
+//   await Promise.resolve(); // pause point, ar eita microtask queue te jabe
+//   y = 2;
+// }
+// f();
+// console.log(x); // 1
+// await Promise.resolve(); // er mane eita je pending microtask gula chalao then continue koro ar eita microtask queue te jabe
+// console.log(y); // 2
+
+
 // async function f() {
 //   console.log("1");
 //   await 0;
