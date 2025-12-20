@@ -10,6 +10,63 @@ import fs from "fs";
 
 
 
+
+// async function f(){
+//     console.log("1");
+//     await Promise.resolve();
+//     console.log("2");
+// }
+// async function main(){
+//     console.log("3");
+//     await f();
+//     console.log("4");
+//     console.log("5");
+// }
+// main(); // 3 1 2 4 5
+
+
+
+// async function f(){
+//     console.log("A");
+//     await 0;
+//     console.log("B");
+// }
+// f();
+// console.log("C");
+// console.log("D");
+
+
+// async function f() {
+//   console.log("A");
+//   await Promise.resolve();
+//   console.log("B");
+// }
+// console.log("C");
+// f();
+// console.log("D");
+// console.log("E");
+
+
+// async function f() {
+//     return 5;
+// }
+// console.log(f()); // promise { 5 }
+
+
+
+// fetch("/api/user")
+//   .then(res => res.json())
+//   .then(data => console.log(data))
+//   .catch(err => console.error(err));
+
+
+// setTimeout(() => {
+//   console.log("Hello from setTimeout");
+// }, 5000);
+
+// const data = readFromNetwork();
+// console.log("hello");
+
 // const res = await fetch("/api/user");
 // if (!res.ok) {
 //   throw new Error("Server error");
