@@ -10,6 +10,66 @@ import fs from "fs";
 
 
 
+// async function f() {
+//   await Promise.resolve();
+//   console.log("1");
+  
+//   console.log("2");
+// }
+
+// console.log("3");
+// await f(); // shortcut : await ar f() er modder await katakati jabe ga 
+// console.log("4");
+// console.log("5");
+
+
+
+/** one of them most important code examples */
+// async function f() {
+//   console.log("A");
+//   await Promise.resolve();
+//   console.log("B");
+// }
+// async function g() {
+//   console.log("C");
+//   await f();
+//   console.log("D");
+// }
+// console.log("E");
+// await g(); // E C A B D F
+// // g(); // E C A F B D
+// console.log("F");
+
+
+
+
+// async function f() {
+//   console.log("1");
+//   await Promise.resolve();
+//   console.log("2");
+// }
+// console.log("3");
+// f().then(() => {
+//     console.log("4");
+// }); // er mane f er kaj fully complete hoile then run hobe
+// console.log("5");
+
+
+// async function f() {
+//   console.log("1");
+//   await Promise.resolve();
+//   console.log("2");
+// }
+
+// async function main() {
+//   console.log("3");
+//   f();                     // don't await here
+//   console.log("4");
+//   await Promise.resolve(); // wait one microtask
+//   console.log("5");
+// }
+
+// main(); // 3 1 4 2 5
 
 // async function f(){
 //     console.log("1");
