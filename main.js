@@ -7,6 +7,41 @@ const prompt = promptSync();
 import fs from "fs";
 
 
+let fifteen = Promise.resolve(15);
+fifteen.then(value => console.log(`Got ${value}`));
+// → Got 15
+
+
+
+
+
+
+// setTimeout(() => console.log("Tick"), 5000);
+// // prints "Tick" after 5 seconds
+// readTextFile("shopping_list.txt", content => {
+//   console.log(`Shopping List:\n${content}`);
+// });
+// // → Shopping List:
+// // → Peanut butter
+// // → Bananas
+// function compareFiles(fileA, fileB, callback) { 
+//   readTextFile(fileA, contentA /**file A er content or likha  */ => { // er mane first file ta porbe 
+//     readTextFile(fileB, contentB /** file b er content or likha */ => { // then second file porbe, eita first file reading er vitore ache tai second file porar jonno wait korbe
+//       callback(contentA == contentB); /** compare  kortese duitar likha or content same kina  */
+//     });
+//   });
+// }/** but ei code ta callback hell e porse 
+//   * karon jodi aro file compare korte hoy tahole aro nested hobe
+//   * tai amra eta ke promise diye likhbo
+// */
+// async function compareFilesPromise(fileA, fileB) {
+//   let contentA = await readTextFilePromise(fileA); // await korbe joto khon na pora sesh hocche 
+//   let contentB = await readTextFilePromise(fileB);
+//   return contentA == contentB;
+// } /** eikhane logic same . but aro easily way to amader ar nested er jamelay jaoya lagtese nah */
+
+
+
 // let x = 0;
 // let y = 0
 // async function f() {
