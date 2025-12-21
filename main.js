@@ -7,12 +7,83 @@ const prompt = promptSync();
 import fs from "fs";
 
 
-let fifteen = Promise.resolve(15);
-fifteen.then(value => console.log(`Got ${value}`));
-// → Got 15
 
 
 
+
+
+
+
+
+// /*** reading a json file and converting the text into a js object 
+//  * and returning the object
+//  */
+// function jsonFile(filename) {
+//   return textFile(filename).then(JSON.parse);
+// }
+// jsonFile("package.json").then(console.log);
+
+
+// /*** reading a file full of filenames, and the returning the content of a random file */
+// function randomFile(listFile) {
+//   return textFile(listFile)
+//     .then(content => content.trim().split("\n"))
+//     .then(ls => ls[Math.floor(Math.random() * ls.length)])
+//     .then(filename => textFile(filename));
+// }
+
+
+// let fifteen = Promise.resolve(15);
+// fifteen.then(value => console.log(`Got ${value}`));
+// // → Got 15
+// /*** we can also use async/await syntax to handle promises more cleanly
+//  * let value = await Promise.resolve(15);
+//  * console.log(`Got ${value}`);
+//  */
+// function textFile(filename) {
+//   return new Promise(resolve => {
+//     textFile(filename, text => resolve(text));
+//   });
+// }
+// textFile("E:\\learning javascript\\sho  pping_list.txt").then(console.log);
+// /***
+//  * the above code can also be written using async/await syntax as below
+//  * const content = await textFile("shopping_list.txt");
+//  * console.log(content);
+//  */
+
+// // low-level callback function
+// // function readTextFile(filename, callback) {
+// //   // fs.readFile / async logic
+// //   setTimeout(() => {
+// //     callback("File content here");
+// //   }, 100);
+// // } // eita real file content nah just to understand async behavior
+// /** real file content porar jonno fs module lage  */
+// function readTextFile(filename, callback) {
+//   fs.readFile(filename, "utf8", (err, data) => {
+//     if (err) {
+//       throw err; // আপাতত error ignore করছি
+//     }
+//     callback(data);
+//   });
+// }
+// // Promise wrapper
+// function textFile(filename) {
+//   return new Promise(resolve => {
+//     readTextFile(filename, text => resolve(text));
+//   });
+// }
+// textFile("shopping_list.txt").then(console.log);
+// /** output : 
+//  * → Peanut butter
+//  * → Bananas
+//  */
+// /***
+//  * the above code can also be written using async/await syntax as below
+//  * const content = await textFile("shopping_list.txt");
+//  * console.log(content);
+//  */
 
 
 
