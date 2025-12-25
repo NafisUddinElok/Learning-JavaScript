@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript and the Browser</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const messageElement = document.getElementById("message");
+            messageElement.textContent = "Hello, JavaScript in the Browser!";
+        });
+    </script>
+</head>
+<body>
+    <h1 id="message">Loading message...</h1>
+    <p style="border: 3px solid rgb(25, 31, 203)">
+    I'm boxed in
+    </p>
+
+    <script>
+    let para = document.body.getElementsByTagName("p")[0];
+    console.log("clientHeight:", para.clientHeight);
+    // → 19
+    console.log("offsetHeight:", para.offsetHeight);
+    // → 25
+    </script>
+    <p>And if you go chasing
+    <span class="animal">rabbits</span></p>
+    <p>And you know you're going to fall</p>
+    <p>Tell 'em a <span class="character">hookah smoking
+    <span class="animal">caterpillar</span></span></p>
+    <p>Has given you the call</p>
+
+    <script>
+    function count(selector) {
+        return document.querySelectorAll(selector).length;
+    }
+    console.log(count("p"));           // All <p> elements
+    // → 4
+    console.log(count(".animal"));     // Class animal
+    // → 2
+    console.log(count("p .animal"));   // Animal inside of <p>
+    // → 2
+    console.log(count("p > .animal")); // Direct child of <p>
+    // → 1
+    </script>
+</body>
+</html>

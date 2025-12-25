@@ -7,8 +7,108 @@ const prompt = promptSync();
 import fs from "fs";
 
 
+Promise.resolve("Done").then(console.log);
+// await Promise.resolve("Done").then(console.log);
+console.log("Me first!");
+
+// → Me first!
+// → Done
 
 
+
+
+
+// /*** function that makes a network request to a given ip with given message
+//  *  and returns a promise that resolves when the request is accepted
+//  * and rejects if the request is rejected
+//  * */
+// function request(ip, message) {
+//     return new Promise((resolve, reject) => {
+//         // simulate network request with setTimeout
+//         setTimeout(() => {
+//             // simulate random acceptance or rejection
+//             if (Math.random() < 0.9) {
+//                 resolve();
+//             } else {
+//                 reject();
+//             }
+//         }, 100);
+//     });
+// }
+// function displayFrame(frame) {
+//   return Promise.all(frame.map((data, i) => {
+//     return request(screenAddresses[i], {
+//       command: "display",
+//       data
+//     });
+//   }));
+// }
+// const screenAddresses = [];
+// for (let i = 1; i <= 255; i++) {
+//     screenAddresses.push(`10.0.0.${i}`);
+// }
+// let frame = []; 
+// for (let n = 0; n < 1500; n++) {
+//     frame.push(0);
+// }
+// setInterval(() => {
+//     // modify frame data here for animation effect
+//     displayFrame(frame).then(() => {
+//         console.log("Frame displayed successfully");
+//     }).catch(() => {
+//         console.log("Some requests were rejected");
+//     });
+// }, 1000 / 30); // 30 frames per second
+
+
+
+
+
+// /*** function that makes a network request to a given ip with given message
+//  * and returns a promise that resolves when the request is accepted
+//  * and rejects if the request is rejected
+//  * */
+// function request(ip, message) {
+//     return new Promise((resolve, reject) => {
+//         // simulate network request with setTimeout
+//         setTimeout(() => {
+//             // simulate random acceptance or rejection
+//             if (Math.random() < 0.8) {
+//                 resolve();
+//             } else {
+//                 reject();
+//             }
+//         }, 100);
+//     });
+// }
+// /*** sending requests to 255 different ip addresses with different data payloads */
+// for (let addr = 1; addr < 256; addr++) {
+//   let data = [];
+//   for (let n = 0; n < 1500; n++) {
+//     data.push(n < addr ? 3 : 0);
+//   }
+//   let ip = `10.0.0.${addr}`;
+//   request(ip, {command: "display", data})
+//     .then(() => console.log(`Request to ${ip} accepted`))
+//     .catch(() => {});
+// }
+
+
+
+
+// function* powers(n) {
+//   for (let current = n;; current *= n) {
+//     console.log("Generating power: " + current);
+//     yield current;
+//   }
+// }
+// for (let power of powers(3)) {
+//   if (power > 50) break;
+//   console.log(power);
+// }
+// // → 3
+// // → 9
+// // → 27
 
 
 
