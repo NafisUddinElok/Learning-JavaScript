@@ -5,13 +5,41 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body style = "background-color: rgb(214, 214, 214);">
-
+  <ul id = "list"> </ul>
+  <button id = "add"> Add item </button>
+  <button id = "load"> Load User </button>  
+  <p id = "result"> Result will be shown here </p>
+  <hr>
   <button id="btn">Click Me</button>4\
   <p id = "text"> Hello I am a text </p>
-  <button class = "btn">one</button>
+
+  <!--  replace with div and buttons -->
+  <div id = "container">
+    <button> one</button>
+    <button> two</button>
+    <button> three</button>
+  </div>
+  <!-- <button class = "btn">one</button>
   <button class = "btn">two </button>
-  <button class = "btn">three </button>
+  <button class = "btn">three </button> -->
 <!-- <button id = "btn2">change text</button> -->
+  
+  <button>a</button>
+  <button>b</button>
+  <button>c</button>
+  <script>
+    document.body.addEventListener("click", event => {
+        if(event.target.nodeName == "BUTTON"){
+            console.log("Clicked", event.target.textContent);
+        }
+    });
+  </script>
+
+  
+
+
+
+
   <script src="script.js"></script>
 </body>
 </html>

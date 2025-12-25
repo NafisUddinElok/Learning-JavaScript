@@ -6,16 +6,37 @@ import promptSync from "prompt-sync";
 const prompt = promptSync();
 import fs from "fs";
 
-
-Promise.resolve("Done").then(console.log);
-// await Promise.resolve("Done").then(console.log);
-console.log("Me first!");
-
-// → Me first!
-// → Done
+/** the event handling - the start */
 
 
 
+
+
+
+// button.addEventListener("click", async () => {
+//   const res = await fetch("/api/user");
+//   const data = await res.json();
+//   console.log(data);
+// }); // click korle handler shuru hoy , then await e giye pause hoy, browser onno kaj korbe, jokhon response asbe tokhon abar ei function ta continue korbe
+
+
+
+// console.log("Button clicked"); // synchronous log
+// button.addEventListener("click", () => {
+//   console.log("Clicked!");
+// }); // asynchronous event handler log er mane button e click korle ei function ta run hobe
+// // other code gula run hobe normally
+
+
+
+
+/**** event handling - the end */
+
+// Promise.resolve("Done").then(console.log);
+// // await Promise.resolve("Done").then(console.log);
+// console.log("Me first!");
+// // → Me first!
+// // → Done
 
 
 // /*** function that makes a network request to a given ip with given message
