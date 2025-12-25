@@ -44,5 +44,26 @@
     console.log(count("p > .animal")); // Direct child of <p>
     // → 1
     </script>
+
+
+
+    <div id = "parent">
+        <button id = "child"> balcal </button>
+        <!-- <div class="child">Click</div> -->
+        <!-- <div class="child">Child 2</div> -->
+    </div>
+    <script>
+        parent.addEventListener("click", function(event) {
+            console.log("Parent was clicked!");
+        }); /***er mane parent ke select kore click event add kora hoise
+        * tarpor event.target diye check kora hoise je click kora element er className "child" kina
+        * jodi hoy tahole console te oi element er textContent dekhano hobe
+        */
+       child.addEventListener("click", function(event) {
+        console.log("child was clicked!");
+       });
+
+
+    </script>
 </body>
 </html>
