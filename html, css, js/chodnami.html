@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>html , css and JS </title>
+</head>
+<body>
+    <p> click this document to activate the handler. </p>
+    <script>
+        window.addEventListener("click", () =>{
+            console.log("You knocked!");
+        });
+    </script>
+
+
+    <!-- painting a circle where the user clicks
+    <style>
+    body {
+        height: 200px;
+        background: beige;
+    }
+    .dot {
+        height: 50px; width: 50px;
+        border-radius: 25px; /* rounds corners = half of the height*/
+        background: teal;
+        position: absolute;
+    }
+    </style>
+    <script>
+    window.addEventListener("click", event => {
+        let dot = document.createElement("div");
+        dot.className = "dot";
+        dot.style.left = (event.pageX - 25/*amra jakhane click kori seta ke center dhore jate ekta circle create hoy setar logic*/) + "px";
+        dot.style.top = (event.pageY - 25) + "px";
+        document.body.appendChild(dot);
+    });
+    </script> -->
+
+
+
+    <!-- <p>Press Control-Space to continue.</p>
+    <script>
+    window.addEventListener("keydown", event => {
+        if (event.key == " "/*space bar*/ && event.ctrlKey) {
+        console.log("Continuing!");
+        }
+    });
+    </script> -->
+
+
+    <!-- <p>This page turns violet when you hold the V key.</p>
+    <script>
+    window.addEventListener("keydown"/** mane kono ekta key chapa*/, event => {
+        if (event.key == "v") {
+        document.body.style.background = "violet";
+        }
+    });
+    window.addEventListener("keyup"/* mane ami chapa theke jokon utai felbo*/, event => {
+        if (event.key == "v") {
+        document.body.style.background = "black";
+        document.body.style.color = "white";
+        }
+    });
+    </script> -->
+
+    <!-- <a href="https://developer.mozilla.org/">MDN</a>
+    <script>
+    let link = document.querySelector("a");
+    link.addEventListener("click", event => {
+        console.log("Nope.");
+        event.preventDefault();
+    });
+    </script> -->
+
+
+    <!-- ei sobgulai event.target !-->
+    <!-- <button> a </button>
+    <button> b </button>
+    <button> c </button> 
+    <script>
+        document.body.addEventListener("click", event => {
+            if(event.target.nodeName == "BUTTON" /*<button> -> BUTTON , <p> -> P, <div> -> DIV, <body> -> BODY*/){
+                console.log(`You clicked button ${event.target.textContent}.`);
+            }
+        });
+    </script> -->
+
+    <!-- <p>A paragraph with a <button>button</button>.</p>
+    <script>
+    let para = document.querySelector("p");
+    let button = document.querySelector("button");
+    para.addEventListener("mousedown"/* mousdown mane ami mouse chepe nicher dike namabo */, () => {
+        console.log("Handler for paragraph.");
+    });
+    button.addEventListener("mouseup", event => {
+        console.log("Handler for button.");
+        if (event.button == 2) event.stopPropagation();
+    });
+    </script> -->
+
+
+    <!-- <button> mouse button detection </button>
+    <script>
+        let button = document.querySelector("button");
+        button.addEventListener("click", (e) => {
+            if(e.button == 0){
+                console.log("Left click detected.");
+            } else if(e.button == 1){
+                console.log("Middle click detected.");
+            } else if(e.button == 2){
+                console.log("Right click detected.");
+            }
+        });
+    </script> -->
+
+
+
+    <!-- <button> Click me </button>
+    <p> no handler here. </p>
+    <script>
+        let button = document.querySelector("button");
+        button.addEventListener("click", () => {
+            console.log("button clicked.");
+        });
+    </script> -->
+
+    <!-- <button> Act-once button </button>
+    <script>
+        let button = document.querySelector("button");
+        function once(){
+            console.log("This will only happen once.");
+            button.removeEventListener("click", once);
+        }
+        button.addEventListener("click", once);
+    </script> -->
+</body>
+</html>
