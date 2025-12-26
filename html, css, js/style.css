@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    padding: 50px;
+}
+
+/* The '8' or Circle shape */
+.circle {
+    width: 60px;
+    height: 60px;
+    background-color: #fcf000;
+    border-radius: 50%;
+}
+
+/* The Square */
+.square {
+    width: 60px;
+    height: 60px;
+    background-color: #33ff57;
+}
+
+/* The Triangle (Arrowhead |>) */
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 50px solid #3357ff;
+}

@@ -2,14 +2,100 @@
 <html>
 <head>
   <title>html , css and JS </title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p> click this document to activate the handler. </p>
+
+    <style>
+        #progress {
+            border-bottom: 2px solid blue;
+            width: 0;
+            position: fixed;
+            top: 0; left: 0;
+        }
+    </style>
+    <div id="progress"></div>
+    <script>
+    // Create some content
+    document.body.appendChild(document.createTextNode(
+        "supercalifragilisticexpialidocious ".repeat(1000)));
+
+    let bar = document.querySelector("#progress");
+    window.addEventListener("scroll", () => {
+        let max = document.body.scrollHeight - innerHeight;
+        console.log("page offset is " + pageYOffset + ", max is " + max);
+        // pageoffset mane scroll distance from top
+        bar.style.width = `${(pageYOffset / max) * 100}%`;
+        // bar width mane hoise scroll er percentage
+        console.log( "scroll kora baki ase :  " + (max - pageYOffset) + " pixels" );
+    });
+    </script>
+
+    <!-- <style>
+    dot { position: absolute; display: block;
+            border: 2px solid red; border-radius: 50px;
+            height: 100px; width: 100px; }
+    </style>
+    <p>Touch this page</p>
+    <script>
+    function update(event) {
+        for (let dot; dot = document.querySelector("dot");) {
+        dot.remove();
+        }
+        for (let i = 0; i < event.touches.length; i++) {
+        let {pageX, pageY} = event.touches[i];
+        let dot = document.createElement("dot");
+        dot.style.left = (pageX - 50) + "px";
+        dot.style.top = (pageY - 50) + "px";
+        document.body.appendChild(dot);
+        }
+    }
+    window.addEventListener("touchstart", update);
+    window.addEventListener("touchmove", update);
+    window.addEventListener("touchend", update);
+    </script> -->
+
+
+
+
+    <!-- <p> click this document to activate the handler. </p>
     <script>
         window.addEventListener("click", () =>{
             console.log("You knocked!");
         });
-    </script>
+    </script> -->
+
+    <!-- <div class="container">
+        <div class="circle"></div>
+        <div class="square"></div>
+        <div class="triangle"></div>
+    </div> -->
+
+
+    <!-- <div style="background: orange; width: 120px; height: px; cursor: ew-resize;">
+    <p>drag this object to make it bigger </p>
+    </div>
+    <script>
+    let lastX; // Tracks the last observed mouse X position
+    let bar = document.querySelector("div");
+    bar.addEventListener("mousedown", event => {
+        if (event.button == 0) {
+        lastX = event.clientX;
+        window.addEventListener("mousemove", moved);
+        event.preventDefault(); // Prevent selection
+        }
+    });
+    function moved(event) { 
+        if (event.buttons == 0) {
+        window.removeEventListener("mousemove", moved);
+        } else {
+        let dist = event.clientX - lastX;
+        let newWidth = Math.max(10, bar.offsetWidth + dist);
+        bar.style.width = newWidth + "px";
+        lastX = event.clientX;
+        }
+    }
+    </script> -->
 
 
     <!-- painting a circle where the user clicks
