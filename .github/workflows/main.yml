@@ -1,0 +1,32 @@
+name : Learning JS CI
+on: 
+  push:
+    paths:  
+      - '**/*.js'
+      - 'package.json'
+
+
+jobs: 
+  test: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install 
+      - name: Run test or main script
+        run: |
+          if [ -f package.json ]; then
+            npm test
+          else 
+            echo "No test script found, running main.js"
+            node main.js
+          fi
+      
+
+      
