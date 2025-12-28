@@ -5,8 +5,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas id = "c" width = "3000" height = "2000">  </canvas>
+    <script>
+        let c = document.getElementById("c");
+        const ctx = c.getContext("2d");
 
-    <style>
+        // ctx.beginPath();
+        ctx.arc(200, 200, 40, 0, Math.PI *2);
+        ctx.fillStyle = "green";
+        ctx.fill(); 
+    </script>
+
+    <!-- <style>
         #progress {
             border-bottom: 2px solid blue;
             width: 0;
@@ -29,7 +39,7 @@
         // bar width mane hoise scroll er percentage
         console.log( "scroll kora baki ase :  " + (max - pageYOffset) + " pixels" );
     });
-    </script>
+    </script> -->
 
     <!-- <style>
     dot { position: absolute; display: block;
