@@ -8,10 +8,13 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "node main.js"
+    "test": "jest" 
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
 }

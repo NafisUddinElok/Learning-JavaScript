@@ -1,10 +1,10 @@
 /*for importing the prompt-sync module*/ 
 // const prompt = require("prompt-sync")(); // it is a part of commonJS not a module 
-import promptSync from "prompt-sync";
+// import promptSync from "prompt-sync";
 // import { dayName } from "./dayname.js";
 
-const prompt = promptSync();
-import fs from "fs";
+// const prompt = promptSync();
+// import fs from "fs";
 
 /** the event handling - the start */
 
@@ -17,7 +17,10 @@ function add(a, b) {
 function multiply(a, b) {
   return a * b;
 }
-
+// for npm test 
+if(typeof module !== "undefined") {
+    module.exports = { add, multiply };
+}
 // "tests"
 console.log("Testing add(2, 3)...");
 if (add(2, 3) !== 5) {
