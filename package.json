@@ -8,7 +8,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "jest" 
+    "test": "npx jest" 
   },
   "keywords": [],
   "author": "",
