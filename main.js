@@ -9,6 +9,28 @@ import fs from "fs";
 /** the event handling - the start */
 
 
+/** testing CI workflow */
+function add(a, b) {
+  return a + b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+// "tests"
+console.log("Testing add(2, 3)...");
+if (add(2, 3) !== 5) {
+  throw new Error("add(2,3) failed");
+}
+
+console.log("Testing multiply(4, 5)...");
+if (multiply(4, 5) !== 20) {
+  throw new Error("multiply(4,5) failed");
+}
+
+console.log("✅ All tests passed!");
+/** testing CI workflow end */
 
 
 
